@@ -18,9 +18,10 @@ const useStyles = makeStyles(() =>
 );
 
 const Answer = (props) => {
-  // const classes = useStyles();
+  const classes = useStyles();
+
   return(
-    <Button variant="contained" color="primary" onClick={() => props.select(props.content, props.nextId)}>
+    <Button className={classes.button} variant="outlined" onClick={() => props.select(props.content, props.nextId)}>
       {props.content}
     </Button>
   )
